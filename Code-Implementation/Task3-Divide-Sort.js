@@ -1,17 +1,14 @@
 divideAndSort = (number) => {
-    if (typeof number == 'number') {
-        let str = number.toString().split('0');
-        let loop = null
-        let newArray = ''
-        for (loop = 0; loop <= str.length; loop++) {
-            newArray += str[loop].split('').sort().join('')
-
-            console.log(parseInt(newArray))
+    if (typeof number === 'number') {
+        const str = number.toString().split('0');
+        let newNumber = ''
+        for (let i = 0; i <= str.length - 1; i++) {
+            newNumber += str[i].split('').sort().join('')
         }
-        // console.log(parseInt(newArray))
+        console.log(parseInt(newNumber))
+        return newNumber;
     } else {
         console.log('Inputan harus angka!');
     }
-    return newArray;
 }
 divideAndSort(5956560159466056);

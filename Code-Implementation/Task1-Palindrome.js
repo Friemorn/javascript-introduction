@@ -3,7 +3,7 @@ palindrome = (word) => {
     for (let i = word.length - 1; i >= 0; i--)
         rev += word[i];
 
-    if (word == rev) {
+    if (word.toLowerCase() == rev.toLowerCase()) {
         console.log(`${rev} adalah palindrom`)
     } else {
         console.log(`${rev} bukan palindrom`)
